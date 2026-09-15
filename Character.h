@@ -17,5 +17,7 @@ class Character{
 
         void print_info() const;
         int take_damage(int dmg);
+        int heal_hero(int heal);
+        int increase_damage(int dmg);
         
 };

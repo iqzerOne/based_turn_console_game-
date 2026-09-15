@@ -35,3 +35,16 @@ int Character::take_damage(int dmg){
     }
     return this->hp;
 }
+
+int Character::heal_hero(int heal){
+    this->hp += heal;
+    if(this->hp > 100){
+        this->hp = 100;
+    }
+    return this->hp;
+}
+
+int Character::increase_damage(int dmg){
+    this->damage += dmg;
+    return this->damage;
+}
