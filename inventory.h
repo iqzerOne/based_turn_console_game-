@@ -11,4 +11,5 @@ public:
     int size() const;
     Item get_item(int index) const;
     void remove_item(int index);
+    void clear_inventory();
 };

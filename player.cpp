@@ -21,10 +21,13 @@ int Player::inventory_size() const{
 }
 
 Item Player::use_item_player(int index) const{
-        // Item use_item = inventory.get_item(index);
         return inventory.get_item(index);
 }
 
 void Player::remove_item_player(int index) {
         inventory.remove_item(index);
+}
+
+void Player::clear_inventory_player(){
+        inventory.clear_inventory();
 }

@@ -14,4 +14,5 @@ class Player : public Character{
         int inventory_size() const;
         Item use_item_player(int index) const;
         void remove_item_player(int index);
+        void clear_inventory_player();
 };

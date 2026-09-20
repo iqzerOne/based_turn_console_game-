@@ -1,4 +1,5 @@
 #include "Character.h"
+#include "constants.h"
 #include <iostream>
 
 Character::Character(std::string name, int hp, int damage) {
@@ -38,13 +39,23 @@ int Character::take_damage(int dmg){
 
 int Character::heal_hero(int heal){
     this->hp += heal;
-    if(this->hp > 100){
-        this->hp = 100;
+    if(this->hp >= Constants::HP_HERO){
+        this->hp = Constants::HP_HERO;
     }
     return this->hp;
 }
 
 int Character::increase_damage(int dmg){
     this->damage += dmg;
+    return this->damage;
+}
+
+int Character::set_hp(int hp){
+    this->hp = hp;
+    return this->hp;
+}
+
+int Character::set_damage(int dmg){
+    this->damage = dmg;
     return this->damage;
 }

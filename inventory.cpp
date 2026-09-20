@@ -11,10 +11,12 @@ int Inventory::size()const{
     return items.size();
 }
 
+
+
 void Inventory::print_items()const{
     if(items.size() > 0){
         for(int i = 0; i < items.size(); i++){
-            std::cout << "Name: "<< items[i].get_name()<<" Type: "<< items[i].get_type() <<" Value: " << items[i].get_value() << std::endl;
+            std::cout << "Name: "<< items[i].get_name()<<" Type: "<< item_type_to_string(items[i].get_type()) <<" Value: " << items[i].get_value() << std::endl;
         }
     }
 }
@@ -29,4 +31,10 @@ void Inventory::remove_item(int index){
         return;
     }
     items.erase(items.begin() + index);
+}
+
+void Inventory::clear_inventory(){
+    if(items.size() > 0){
+        items.clear();
+    }
 }

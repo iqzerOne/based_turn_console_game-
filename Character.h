@@ -19,5 +19,7 @@ class Character{
         int take_damage(int dmg);
         int heal_hero(int heal);
         int increase_damage(int dmg);
+        int set_hp(int hp);
+        int set_damage(int dmg);
         
 };
